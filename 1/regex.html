@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+</head>
+<body>
+    <form id="myform">
+        <div class="mb-3">
+            <label for="username">Username : </label>
+            <input type="text" id="username" name="username" pattern="^[a-z0-9_-]{3,15}$">
+            <p id="invalid-username" style="display:none;color:red">panjang minimal 3 karakter</p>    
+        </div>
+        <div class="mb-3">
+            <label for="nama">Nama : </label>
+            <input type="text" id="nama" name="nama" pattern="^[a-zA-Z\s'-]{1,100}$">
+            <p id="invalid-nama" style="display:none;color:red">nama tidak boleh angka</p>   
+        </div>
+        <div class="mb-3">
+            <label for="tl">Tanggal Lahir : </label>
+            <input type="text" id="tl" name="tl" pattern="^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$" placeholder="dd-mm-yyyy">
+            <p id="invalid-tl" style="display:none;color:red">sesuaikan dengan format dd-mm-yyyy</p>  
+        </div>
+        <div class="mb-3">
+            <label for="hp">No HP: </label>
+            <input type="text" id="hp" name="hp" pattern="^0[0-9]{9,11}">
+            <p id="invalid-hp" style="display:none;color:red">Tidak valid</p>  
+        </div>
+        <div class="mb-3">
+            <label for="email">Alamat Email :</label>
+            <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+[.]+[a-zA-Z]{2,10}$" placeholder="ninna@company.com">
+            <p id="invalid-email" style="display:none;color:red">sesuaikan dengan format ninna@company.com</p>       
+        </div>
+        <div class="mb-3">
+        <label for="password">Password :</label>
+        <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+        <p id="invalid-password" style="display:none;color:red">panjang password minimal 8 karakter, dan harus mengandung huruf kapital, angka, dan simbol</p>
+        </div>
+        
+
+        <br>
+        <input type="submit" value="Simpan" />
+    </form>
+
+    <script>
+    const usernameField = document.querySelector("[name=username]");
+
+    usernameField.addEventListener("keyup", (event) => {
+    if(!usernameField.validity.valid){
+        console.error("username invalid");
+        document.getElementById("invalid-username").style.display = "block";
+    } else {
+         console.info("username valid");
+        document.getElementById("invalid-username").style.display = "none";
+    }
+    });
+    </script>
+
+    <script>
+    const namaField = document.querySelector("[name=nama]");
+
+    namaField.addEventListener("keyup", (event) => {
+    if(!namaField.validity.valid){
+        console.error("nama invalid");
+        document.getElementById("invalid-nama").style.display = "block";
+    } else {
+         console.info("nama valid");
+        document.getElementById("invalid-nama").style.display = "none";
+    }
+    });
+    </script>
+
+    <script>
+    const tlField = document.querySelector("[name=tl]");
+
+    tlField.addEventListener("keyup", (event) => {
+    if(!tlField.validity.valid){
+        console.error("tl invalid");
+        document.getElementById("invalid-tl").style.display = "block";
+    } else {
+         console.info("tl valid");
+        document.getElementById("invalid-tl").style.display = "none";
+    }
+    });
+    </script>
+
+    <script>
+    const hpField = document.querySelector("[name=hp]");
+
+    hpField.addEvenhpistener("keyup", (event) => {
+    if(!hpField.validity.valid){
+        console.error("hp invalid");
+        document.getElementById("invalid-hp").style.display = "block";
+    } else {
+         console.info("hp valid");
+        document.getElementById("invalid-hp").style.display = "none";
+    }
+    });
+    </script>
+
+    <script>
+    const emailField = document.querySelector("[name=email]");
+
+    emailField.addEvenemailistener("keyup", (event) => {
+    if(!emailField.validity.valid){
+        console.error("email invalid");
+        document.getElementById("invalid-email").style.display = "block";
+    } else {
+         console.info("email valid");
+        document.getElementById("invalid-email").style.display = "none";
+    }
+    });
+    </script>
+
+    <script>
+    const passwordField = document.querySelector("[name=password]");
+
+    passwordField.addEventListener("keyup", (event) => {
+    if(!passwordField.validity.valid){
+        console.error("password invalid");
+        document.getElementById("invalid-password").style.display = "block";
+    } else {
+         console.info("password valid");
+        document.getElementById("invalid-passowrd").style.display = "none";
+    }
+    });
+    </script>
+</body>
+</html>
