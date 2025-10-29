@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabryelle’s Portfolio</title>
+  <link rel="icon" type="image/png" href="image/icon.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="container nav-container">
+      <img src="image/teksportfolio.png" alt="Teks" class="nav-logo"/>
+      <nav>
+        <ul>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#contact">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Profile Section -->
+  <section id="profile" class="section profile-section">
+    <div class="container profile-container">
+      <div class="profile-image">
+        <img src="image/gambarprofile.png" alt="Gambar Diri" />
+      </div>
+      <div class="profile-text">
+        <p>
+          Hi! I'm <strong>Gabryelle Ninna Deffanya Siahaan</strong>, a fresh graduate from Universitas Sumatera Utara passionate about data and technology. I love analyzing data, designing digital solutions, and developing user-friendly systems using MySQL, PHP, JavaScript, Kotlin, and Python. I’m open to opportunities in data, development, or design to grow and make a positive impact and seeking roles in data analysis, machine learning, app development, or UI/UX design.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Section -->
+  <section id="project" class="section project-section">
+    <div class="container">
+      <h2>My Projects</h2>
+
+      <div class="filter-container">
+        <label for="categoryFilter">Filter by:</label>
+        <select id="categoryFilter">
+          <option value="all">All</option>
+          <option value="data">Data</option>
+          <option value="uiux">UI/UX</option>
+          <option value="program">Program</option>
+        </select>
+      </div>
+
+
+      <div class="project-grid">
+        <div class="project-card" data-category="program">
+          <img src="image/narro.png" alt="Narro" />
+          <div class="project-info">
+            <h3>Narro</h3>
+            <p>LSTM-based speech recognition model to recognize seven voice commands with 96.6% accuracy using data from 53 users. Built a Kotlin mobile app integrated with the model via FastAPI, Google ML Kit (OCR), and Text-to-Speech (TTS).</p>
+            <span>#Program</span>
+            <div class="project-buttons">
+            <a href="https://github.com/garbryel/Narro.git" class="project-link">See Project</a>
+            <a href="https://drive.google.com/file/d/1oRxo4_3iiqL2EjwqLATIYhN1KEZy2w3V/view?usp=sharing" class="project-link">Demo App</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="program">
+          <img src="image/laka.png" alt="laka" />
+          <div class="project-info">
+            <h3>Web LAKA</h3>
+            <p>Full-stack dashboard using Laravel 10 and MySQL to digitalize and streamline credit administration processes previously managed through Excel. Implemented multi-level user access control and full CRUD functionalities with Excel file upload for daily and monthly data management.</p>
+            <span>#Program</span>
+            <div class="project-buttons">
+            <a href="https://drive.google.com/drive/folders/17TKmPfalvCRS0xtsuKVowkLwALiwZa1a?usp=sharing" class="project-link">Demo App</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="program">
+          <img src="image/litfinder.png" alt="litfinder" />
+          <div class="project-info">
+            <h3>Lit Finder</h3>
+            <p>A book recommendation system using Amazon Books data containing 40,635 books and 414,518 ratings. Built a Collaborative Filtering model with cosine similarity and an SVD model using the Surprise library. Achieved an RMSE of 1.1091, demonstrating strong prediction performance for personalized book suggestions.</p>
+            <span>#Program</span>
+            <div class="project-buttons">
+            <a href="https://github.com/LitFinder/Recommender.git" class="project-link">See Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="program">
+          <img src="image/nagori.png" alt="Nagori" />
+          <div class="project-info">
+            <h3>Village Digitalization</h3>
+            <p>A village digitalization website for Nagori Nagori Tongah, enhancing community engagement and administrative transparency. Designed database structures and added admin functionalities for managing operators and monitoring user activities through detailed logging.</p>
+            <span>#Program</span>
+            <div class="project-buttons">
+            <a href="https://github.com/erligurning03/web_nagori_tongah.git" class="project-link">See Project</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="uiux">
+          <img src="image/ecosea.png" alt="Ecosea" />
+          <div class="project-info">
+            <h3>EcoSEA</h3>
+            <p>Applying the Design Thinking framework to promote recycling awareness. Refined the prototype through iterative usability testing with six participants, improving the average System Usability Scale (SUS) score from 41 to 43.33.</p>
+            <span>#UI/UX</span>
+            <div class="project-buttons">
+            <a href="https://www.figma.com/proto/Tmjva8PxWNCFCHsx7388U8/EcoSEA?node-id=705-763&t=CVFsMRPwgOi4v7Jf-1&scaling=scale-down&content-scaling=fixed&page-id=12%3A79&starting-point-node-id=1109%3A1155&show-proto-sidebar=1" class="project-link">See Prototype</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="uiux">
+          <img src="image/demenion.png" alt="Demenion" />
+          <div class="project-info">
+            <h3>Demenion</h3>
+            <p>Designed the complete UX/UI for Demenion, a dementia caregiver support app, earning a System Usability Scale (SUS) score of 88.75 (Grade A). Developed over eight feature categories, including medical records, cognitive activities, service booking, and real-time monitoring.</p>
+            <span>#UI/UX</span>
+            <div class="project-buttons">
+            <a href="https://www.figma.com/proto/a9fKLoLz3SlEB9OibLbCsX/Prototype-Gemastik-2024?node-id=1269-25348&p=f&t=2fZk5d2UpKc8lZ8S-1&scaling=scale-down&content-scaling=fixed&page-id=1269%3A13200&starting-point-node-id=1269%3A25281&show-proto-sidebar=1" class="project-link">See Prototype</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="uiux">
+          <img src="image/healthy.png" alt="Healthy" />
+          <div class="project-info">
+            <h3>HealthyMate</h3>
+            <p>Designed a health application using the Design Thinking method, with features tailored to meet the needs of users who want to maintain and improve their health. The app focuses on an intuitive user experience and provides solutions that help users achieve a sustainable healthy lifestyle.</p>
+            <span>#UI/UX</span>
+            <div class="project-buttons">
+            <a href="https://www.figma.com/proto/fTnUgMuFtKYLWIqbNMdYTA/Tubes-DI?node-id=185-879&p=f&t=nr6mNUwdtkkgO20G-1&scaling=scale-down&content-scaling=fixed&page-id=54%3A10125&starting-point-node-id=158%3A3692" class="project-link">See Prototype</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="data">
+          <img src="image/data.png" alt="Data" />
+          <div class="project-info">
+            <h3>Data Visualization (Dashboard)</h3>
+            <p>Data Visualization using Python, Excel, Google Sheet, Streamlit, SQL, and PowerBI</p>
+            <span>#Data</span>
+            <div class="project-buttons">
+            <a href="https://drive.google.com/drive/folders/10FmG-DpNWRvZYyxgpKI8Q9VijFTtQY_V?usp=sharing" class="project-link">See Project</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <ul class="contact-list">
+        <li>
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+          <a href="https://github.com/garbryel" target="_blank">garbryel</a>
+        </li>
+        <li>
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+          <a href="https://www.linkedin.com/in/gabryelle-siahaan/" target="_blank">Gabryelle Siahaan</a>
+        </li>
+        <li>
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail" />
+          <a href="mailto:gabryelle.siahaan@gmail.com">gabryelle.siahaan@gmail.com</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Gabryelle Ninna Deffanya Siahaan</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
